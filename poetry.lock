@@ -651,8 +651,8 @@ termcolor = ["termcolor"]
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "8266f4c60d4c75a39009dba839a0b142c67e279f207404e5ee274c3d01f3ea59"
-python-versions = "^3.8"
+content-hash = "70e58bf898224ee2bef8171b4ecac36535aeb0e95615b8fe53ce86b21120a3af"
+python-versions = "^3.7"
 
 [metadata.files]
 astor = [

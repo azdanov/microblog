@@ -5,7 +5,7 @@ description = "Project from the 'The New and Improved Flask Mega-Tutorial' cours
 authors = ["Anton Zdanov <azdanov@pm.me>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 flask = "^1.1.1"
 python-dotenv = "^0.10.3"
 

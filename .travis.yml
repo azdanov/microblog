@@ -4,6 +4,7 @@ python:
 before_install:
 - pip install --upgrade pip
 - pip install poetry
+- poetry lock
 install:
 - poetry install
 script:

@@ -8,6 +8,7 @@ authors = ["Anton Zdanov <azdanov@pm.me>"]
 python = "^3.7"
 flask = "^1.1.1"
 python-dotenv = "^0.10.3"
+Flask-WTF = "^0.14.2"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.740"

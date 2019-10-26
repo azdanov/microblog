@@ -8,12 +8,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from app import app, db, login
 
-
-@login.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
-
-
 followers = db.Table(
     "followers",
     db.Column("follower_id", db.Integer, db.ForeignKey("user.id")),
@@ -38,32 +32,20 @@ class User(UserMixin, db.Model):
         lazy="dynamic",
     )
 
+    def __repr__(self):
+        return "<User {}>".format(self.username)
+
     def set_password(self, password):
         self.password = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
-    def get_reset_password_token(self, expires_in=600):
-        return jwt.encode(
-            {"reset_password": self.id, "exp": time() + expires_in},
-            app.config["SECRET_KEY"],
-            algorithm="HS256",
-        ).decode("utf-8")
-
-    @staticmethod
-    def verify_reset_password_token(token):
-        try:
-            id = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"])[
-                "reset_password"
-            ]
-        except:
-            return
-        return User.query.get(id)
-
     def avatar(self, size):
         digest = md5(self.email.lower().encode("utf-8")).hexdigest()
-        return f"https://www.gravatar.com/avatar/{digest}?d=identicon&s={size}"
+        return "https://www.gravatar.com/avatar/{}?d=identicon&s={}".format(
+            digest, size
+        )
 
     def follow(self, user):
         if not self.is_following(user):
@@ -83,8 +65,27 @@ class User(UserMixin, db.Model):
         own = Post.query.filter_by(user_id=self.id)
         return followed.union(own).order_by(Post.timestamp.desc())
 
-    def __repr__(self):
-        return "<User {}>".format(self.username)
+    def get_reset_password_token(self, expires_in=600):
+        return jwt.encode(
+            {"reset_password": self.id, "exp": time() + expires_in},
+            app.config["SECRET_KEY"],
+            algorithm="HS256",
+        ).decode("utf-8")
+
+    @staticmethod
+    def verify_reset_password_token(token):
+        try:
+            id = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"])[
+                "reset_password"
+            ]
+        except:
+            return
+        return User.query.get(id)
+
+
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 
 class Post(db.Model):
@@ -92,6 +93,7 @@ class Post(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    language = db.Column(db.String(5))
 
     def __repr__(self):
         return "<Post {}>".format(self.body)

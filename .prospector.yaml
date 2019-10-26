@@ -13,6 +13,7 @@ pylint:
     - too-few-public-methods
     - redefined-outer-name
     - unused-argument
+    - ungrouped-imports
 pyflakes:
   disable:
     - F401 # import not at top

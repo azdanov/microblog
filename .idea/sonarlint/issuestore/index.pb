@@ -32,3 +32,9 @@ H
 app/templates/login.html,4/4/44e1395d5487da14707cdaf0b591c4e9c08b5d9b
 G
 app/templates/base.html,b/6/b6171f99674bbc82b0b41d343bbc7523b74521ac
+=
+app/models.py,e/9/e919f1e867cfa561970ba9549250f4d5bb90bcf6
+F
+migrations/alembic.ini,6/3/6363203731e53d99f7f2e253f95ee1f8aa0cec00
+I
+migrations/script.py.mako,2/2/2271d770709026da8abd2dc327625dceb8d32bb5

@@ -48,3 +48,9 @@ g
 7.venv/lib/python3.7/site-packages/flask_login/mixins.py,9/a/9a7d009f857ecff2b7ba016fff9563b6e55421f0
 A
 migrations/README,8/b/8b9948ccb252e634d14f6b7f949d2e629f6f8f2a
+K
+app/templates/register.html,8/2/8271b8723a0435c43160a565f02704ca4b22486e
+@
+.prospector.yaml,a/0/a0e9c6dd357de199678086447b9a8f7f967cc56d
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

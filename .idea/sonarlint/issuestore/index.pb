@@ -60,3 +60,17 @@ H
 app/templates/_post.html,1/5/159e067a2a5099f20ff4559884d0929982cc2edb
 G
 app/templates/user.html,f/7/f7a3ecbf2b1b76fa53254b58629fe19b0996f83e
+l
+<migrations/versions/1e6370fa19ae_new_fields_in_user_model.py,3/3/3346bc6ed84b2b59d76544e261ade11845f0682f
+O
+app/templates/edit_profile.html,2/8/287b38bc68aeb93993ec4b7e9b8750541fd833d2
+F
+app/templates/500.html,7/5/75fc4c31b06f77698da018d851b9aac47ebfd590
+B
+logs/microblog.log,1/b/1b5148f07958f04681acf22485d35b9957888429
+<
+.env.example,d/4/d4dae00d11854b35292c2b8a30515a9a0aa2d871
+=
+app/errors.py,d/d/dd683aaedd527aac7fb0456ee92107f4c6176e41
+F
+app/templates/404.html,6/a/6a06d6aa764d8215b6f75a6c2f38ff10a26ae3f7

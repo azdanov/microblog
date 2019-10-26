@@ -9,3 +9,4 @@ install:
 - poetry install
 script:
 - poetry run prospector
+- python -m unittest tests/tests.py

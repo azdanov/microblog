@@ -174,6 +174,17 @@ alembic = ">=0.7"
 
 [[package]]
 category = "main"
+description = "Formatting of dates and times in Flask templates using moment.js."
+name = "flask-moment"
+optional = false
+python-versions = "*"
+version = "0.9.0"
+
+[package.dependencies]
+Flask = "*"
+
+[[package]]
+category = "main"
 description = "Adds SQLAlchemy support to your Flask application."
 name = "flask-sqlalchemy"
 optional = false
@@ -747,7 +758,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "224d13b5b10dd586a283a798d89f270d763fef46d97274fccfd1ace72f01c40e"
+content-hash = "4bd627ca0d216c310fa8e9891b5c7b8577b15db26a30cb496c6b912d95f6b0df"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -804,6 +815,10 @@ flask-mail = [
 flask-migrate = [
     {file = "Flask-Migrate-2.5.2.tar.gz", hash = "sha256:a96ff1875a49a40bd3e8ac04fce73fdb0870b9211e6168608cbafa4eb839d502"},
     {file = "Flask_Migrate-2.5.2-py2.py3-none-any.whl", hash = "sha256:6fb038be63d4c60727d5dfa5f581a6189af5b4e2925bc378697b4f0a40cfb4e1"},
+]
+flask-moment = [
+    {file = "Flask-Moment-0.9.0.tar.gz", hash = "sha256:3e8b88f99af7cf75f2f29ef9d8c158eb92ca6f3c1ba6456ad70f715efa6eb7f7"},
+    {file = "Flask_Moment-0.9.0-py2.py3-none-any.whl", hash = "sha256:3c509afa25fd77459c9d799f292dcea384b1cd588ed1fd68f97f6fda6131299e"},
 ]
 flask-sqlalchemy = [
     {file = "Flask-SQLAlchemy-2.4.1.tar.gz", hash = "sha256:6974785d913666587949f7c2946f7001e4fa2cb2d19f4e69ead02e4b8f50b33d"},

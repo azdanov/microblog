@@ -15,6 +15,7 @@ flask-login = "^0.4.1"
 flask-mail = "^0.9.1"
 pyjwt = "^1.7.1"
 flask-bootstrap = "^3.3.7"
+flask-moment = "^0.9.0"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.740"

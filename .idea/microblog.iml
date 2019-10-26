@@ -10,9 +10,11 @@
     <orderEntry type="jdk" jdkName="Python 3.7 (microblog)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
   <component name="PyDocumentationSettings">
-    <option name="format" value="REST" />
-    <option name="myDocStringFormat" value="reStructuredText" />
+    <option name="myDocStringFormat" value="Google" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
@@ -21,5 +23,8 @@
         <option value="$MODULE_DIR$/app/templates" />
       </list>
     </option>
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>

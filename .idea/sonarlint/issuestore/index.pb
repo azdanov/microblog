@@ -38,3 +38,13 @@ F
 migrations/alembic.ini,6/3/6363203731e53d99f7f2e253f95ee1f8aa0cec00
 I
 migrations/script.py.mako,2/2/2271d770709026da8abd2dc327625dceb8d32bb5
+_
+/migrations/versions/7ca004cb303a_posts_table.py,3/3/33f3bdf860338f3782b63bc828e96e6fe1760def
+_
+/migrations/versions/f9a9c741f0d6_users_table.py,8/0/804e6fc96e241bb41362c261b3f9e72f07dc1a4d
+A
+migrations/env.py,1/d/1d5e98f855877457efdcea5bdbf1b44bb25f16f9
+g
+7.venv/lib/python3.7/site-packages/flask_login/mixins.py,9/a/9a7d009f857ecff2b7ba016fff9563b6e55421f0
+A
+migrations/README,8/b/8b9948ccb252e634d14f6b7f949d2e629f6f8f2a

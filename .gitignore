@@ -206,7 +206,8 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -369,3 +370,4 @@ dist
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+.idea/sonarlint/

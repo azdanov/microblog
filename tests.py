@@ -1,18 +1,28 @@
+#!/usr/bin/env python
 import unittest
 from datetime import datetime, timedelta
 
-from app import app, db
+from app import create_app, db
 from app.models import Post, User
+from config import Config
+
+
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
 
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite://"
+        self.app = create_app(TestConfig)
+        self.app_context = self.app.app_context()
+        self.app_context.push()
         db.create_all()
 
     def tearDown(self):
         db.session.remove()
         db.drop_all()
+        self.app_context.pop()
 
     def test_password_hashing(self):
         u = User(username="susan")
@@ -39,6 +49,7 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
         self.assertEqual(u1.followed.all(), [])
         self.assertEqual(u1.followers.all(), [])
+
         u1.follow(u2)
         db.session.commit()
         self.assertTrue(u1.is_following(u2))
@@ -46,6 +57,7 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u1.followed.first().username, "susan")
         self.assertEqual(u2.followers.count(), 1)
         self.assertEqual(u2.followers.first().username, "john")
+
         u1.unfollow(u2)
         db.session.commit()
         self.assertFalse(u1.is_following(u2))

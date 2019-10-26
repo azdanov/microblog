@@ -1,0 +1,21 @@
+inherits:
+  - strictness_veryhigh
+ignore-paths:
+  - migrations
+pylint:
+  options:
+    max-line-length: 88 # Black formatter
+  disable:
+    - cyclic-import
+    - wrong-import-position
+    - invalid-name
+    - no-self-use
+    - too-few-public-methods
+pyflakes:
+  disable:
+    - F401 # import not at top
+pep8:
+  options:
+    max-line-length: 88 # Black formatter
+  disable:
+    - E402 # import not at top

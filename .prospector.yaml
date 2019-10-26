@@ -11,6 +11,7 @@ pylint:
     - invalid-name
     - no-self-use
     - too-few-public-methods
+    - redefined-outer-name
 pyflakes:
   disable:
     - F401 # import not at top

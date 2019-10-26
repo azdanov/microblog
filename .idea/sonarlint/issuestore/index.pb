@@ -74,3 +74,21 @@ B
 app/errors.py,d/d/dd683aaedd527aac7fb0456ee92107f4c6176e41
 F
 app/templates/404.html,6/a/6a06d6aa764d8215b6f75a6c2f38ff10a26ae3f7
+i
+9.venv/lib/python3.7/site-packages/sqlalchemy/orm/query.py,4/5/45dd8516fc0c58cab4703d7d77c08792a4b38d9e
+>
+tests/tests.py,0/0/002e3bc3eddf51d9e25c30326a4bc060aadbf93b
+G
+.pre-commit-config.yaml,e/7/e7d14d429f898757a423156de0e8c49d75240694
+n
+>.venv/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py,0/8/08a7db781ab3b3f4da541a93875f92d06aae1098
+V
+&app/templates/email/reset_password.txt,c/1/c14d285d86c5c337678992822c85e0503365e5ab
+Q
+!app/templates/reset_password.html,d/1/d104abc6a6b6c6cc456bc74d1b18c3e0f1de4938
+Y
+)app/templates/reset_password_request.html,6/e/6e7d88e7ce19caf444b305183c95fb554b7ef277
+<
+app/email.py,f/3/f31736a5b3400e24277165889dcbcaa748a7e20a
+W
+'app/templates/email/reset_password.html,5/3/53fc6fdbe4576b25674113f6a0faed22b47a573b
